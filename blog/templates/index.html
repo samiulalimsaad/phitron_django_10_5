@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Blog App</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@4.4.17/dist/full.min.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="container mx-auto">
+        <h1>Blog List</h1>
+        <fieldset class="border p-4">
+            <legend class="text-center">variable_name | filter_name</legend>
+            <table class="table table-zebra">
+                <thead>
+                    <tr>
+                        <th>Blog Title</th>
+                        <th>Filter</th>
+                        <th>Title</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for blog in blogs %}
+                    <tr>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>length</code></td>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>{{ blog.title | length }}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>add</code></td>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>{{ blog.title | add:" 2" }}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>addslashes</code></td>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>{{ blog.title | addslashes }}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>capfirst</code></td>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>{{ blog.title | capfirst }}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>cut</code></td>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>{{ blog.title | cut:" " }}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>date</code></td>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>{{ blog.title | date:"D d M Y" }}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>escape</code></td>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>{{ blog.title | escape }}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>filesizeformat</code></td>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>{{ blog.title | filesizeformat }}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>first</code></td>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>{{ blog.title | first }}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>join</code></td>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>{{ blog.title | join:" // " }}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>last</code></td>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>{{ blog.title | last }}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>linenumbers</code></td>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>{{ blog.title | linenumbers }}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>lower</code></td>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>{{ blog.title | lower }}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>make_list</code></td>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>{{ blog.title | make_list }}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>random</code></td>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>{{ blog.title | random }}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>slice</code></td>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>{{ blog.title | slice:":2" }}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>title</code></td>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>{{ blog.title | title }}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>upper</code></td>
+                        <td><code>{{ blog.title }}</code></td>
+                        <td><code>{{ blog.title | upper }}</code></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </fieldset>
+    </body>
+</html>
