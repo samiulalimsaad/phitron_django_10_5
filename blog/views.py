@@ -19,3 +19,20 @@ blogs = [
 
 def home(req: HttpRequest):
     return render(req, "index.html", {"blogs": blogs[:2]})
+
+
+def blog_list(request):
+    context = {"blogs": blogs}
+    return render(request, "blog_list.html", context)
+
+
+def about(request):
+    return render(request, "about.html")
+
+
+def contact(request):
+    return render(request, "contact.html")
+
+
+def services(request):
+    return render(request, "services.html")

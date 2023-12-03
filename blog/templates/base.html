@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Blog App</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@4.4.17/dist/full.min.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="container mx-auto">
+        <nav>
+            <ul class="flex items-center justify-center gap-4">
+                <li><a class="link" href="{% url 'home' %}">Home</a></li>
+                <li><a class="link" href="{% url 'about' %}">About</a></li>
+                <li><a class="link" href="{% url 'contact' %}">Contact</a></li>
+                <li>
+                    <a class="link" href="{% url 'services' %}">Services</a>
+                </li>
+            </ul>
+        </nav>
+        <div>{% block content %}{% endblock content %}</div>
+    </body>
+</html>
